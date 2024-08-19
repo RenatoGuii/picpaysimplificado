@@ -2,20 +2,31 @@
 Este projeto é uma API desenvolvida com a finalidade de gerenciar transações financeiras entre usuários, permitindo o registro, consulta e controle de transferências monetárias. A API foi construída utilizando Spring Boot, Spring Data JPA, e outras tecnologias do ecossistema Spring.
 
 <h2>Funcionalidades:</h2>
+
 - Gerenciamento de Usuários: Cadastro, consulta, listagem de usuários com paginação.
+  
 - Transações: Criação, consulta e listagem de transações financeiras entre usuários.
+  
 - Segurança: Implementação de boas práticas de segurança para garantir a integridade e privacidade das transações.
+  
 - Documentação da API: A API está documentada utilizando o Swagger.
 
 <h2>Tecnologias Utilizadas:</h2>
+
 -  Spring Boot 3: Framework principal para construção da API.
+  
 -  Spring Data JPA: Integração com o banco de dados e manipulação de entidades.
+  
 -  Spring Security: Uso da funcionalidade de criptografia de senhas
+  
 -  Swagger: Ferramenta para documentação da API.
 
 <h2>Requisitos:</h2>
+
 - Java 17 ou superior
+  
 - Maven para gerenciamento de dependências
+  
 - Banco de Dados MySQL
 
 <h2>Configuração do Projeto:</h2>
