@@ -7,7 +7,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
+
+import org.springframework.hateoas.RepresentationModel;
 
 @Entity
 @Table(name = "transactions")
@@ -15,12 +18,13 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class TransactionEntity {
+public class TransactionEntity extends RepresentationModel<TransactionEntity> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private LocalDateTime date;
+    private BigDecimal val;
 
     @ManyToOne
     @JoinColumn(name = "id_payer")

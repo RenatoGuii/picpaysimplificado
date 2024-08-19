@@ -1,10 +1,12 @@
 package com.picpaysimplificado.entities.user;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.hateoas.RepresentationModel;
 
 import java.math.BigDecimal;
 
@@ -14,7 +16,7 @@ import java.math.BigDecimal;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserEntity {
+public class UserEntity extends RepresentationModel<UserEntity> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,12 +29,17 @@ public class UserEntity {
     private String lastName;
 
     private String email;
+
+    @JsonIgnore
     private String password;
+
+    @JsonIgnore
     private String document; // Pode ser CPF ou CNPJ
 
     @Column(name = "user_type")
     @Enumerated(EnumType.STRING)
     private UserType userType;
 
+    @JsonIgnore
     private BigDecimal balance;
 }

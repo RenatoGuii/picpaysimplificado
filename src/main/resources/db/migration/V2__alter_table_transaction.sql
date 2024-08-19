@@ -1,0 +1,2 @@
+ALTER TABLE transactions
+ADD COLUMN val DECIMAL(19, 2) NOT NULL;
